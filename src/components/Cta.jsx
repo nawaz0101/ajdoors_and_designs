@@ -1,4 +1,4 @@
-import "./Cta.css";
+import "./cta.css";
 import {
   FiArrowUpRight,
   FiPhoneCall,
