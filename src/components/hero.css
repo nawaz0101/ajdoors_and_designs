@@ -1,0 +1,278 @@
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+}
+
+/* ===================================
+   SLIDER TRACK
+=================================== */
+
+.hero-track {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.hero-slide {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* ===================================
+   IMAGE
+=================================== */
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ===================================
+   OVERLAY
+=================================== */
+
+.hero-overlay {
+  position: absolute;
+  inset: 3;
+}
+
+/* ===================================
+   CONTENT
+=================================== */
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+}
+
+.hero-subtitle {
+  display: inline-block;
+  color: #000000;
+  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  line-height: 1.25;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,.88);
+  max-width: 580px;
+  margin-bottom: 40px;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 16px 34px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: .35s;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #d4af37;
+  color: #111;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(212,175,55,.35);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(12px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,.15);
+  transform: translateY(-4px);
+}
+
+/* ===================================
+   ARROWS
+=================================== */
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 24px;
+  backdrop-filter: blur(10px);
+  transition: .3s;
+  z-index: 5;
+}
+
+.hero-arrow:hover {
+  background: #d4af37;
+  color: #111;
+}
+
+.hero-arrow.left {
+  left: 25px;
+}
+
+.hero-arrow.right {
+  right: 25px;
+}
+
+/* ===================================
+   DOTS
+=================================== */
+
+.hero-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 5;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(246, 250, 11, 0.567);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.dot.active {
+  background: #fff70d;
+  transform: scale(1.35);
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 992px) {
+
+  .hero-content {
+    left: 6%;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 100svh;
+  }
+
+  .hero-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .hero-arrow {
+    display: none;
+  }
+}
+
+/* ===================================
+   SMALL MOBILE
+=================================== */
+
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content p {
+    font-size: .9rem;
+  }
+}

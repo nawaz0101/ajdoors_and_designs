@@ -1,0 +1,779 @@
+/* ==========================================================
+   ABOUT SECTION
+========================================================== */
+
+:root{
+    --ab-bg:#f8f6f2;
+    --ab-dark:#151515;
+    --ab-text:#666;
+    --ab-gold:#c8a96a;
+    --ab-border:#e8e2d9;
+    --ab-transition:.45s cubic-bezier(.22,.61,.36,1);
+}
+
+.about{
+    background:var(--ab-bg);
+    padding:140px 7%;
+    overflow:hidden;
+}
+
+.aboutContainer{
+    max-width:1450px;
+    margin:auto;
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.aboutHeading{
+    max-width:760px;
+    margin:0 auto 100px;
+    text-align:center;
+}
+
+.aboutHeading span{
+    display:inline-block;
+    color:var(--ab-gold);
+    letter-spacing:4px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.aboutHeading h2{
+    font-family:"Playfair Display",serif;
+    color:var(--ab-dark);
+    font-size:clamp(2.8rem,5vw,4.8rem);
+    line-height:1.12;
+    margin-bottom:28px;
+    font-weight:600;
+}
+
+.aboutHeading p{
+    color:var(--ab-text);
+    font-size:1.05rem;
+    line-height:2;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.aboutContent{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+}
+
+/* ==========================================================
+   LEFT
+========================================================== */
+
+.aboutLeft{
+    position:relative;
+}
+
+.aboutImageLarge{
+    height:760px;
+    overflow:hidden;
+    border-radius:30px;
+}
+
+.aboutImageLarge img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s ease;
+}
+
+.aboutImageLarge:hover img{
+    transform:scale(1.08);
+}
+
+/* ==========================================================
+   EXPERIENCE CARD
+========================================================== */
+
+.experienceCard{
+
+    position:absolute;
+
+    right:-50px;
+    bottom:60px;
+
+    width:220px;
+
+    padding:35px;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.08);
+
+    border:1px solid var(--ab-border);
+
+    transition:var(--ab-transition);
+
+}
+
+.experienceCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.experienceCard h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:4rem;
+
+    color:var(--ab-gold);
+
+    margin-bottom:10px;
+
+}
+
+.experienceCard p{
+
+    color:var(--ab-dark);
+
+    line-height:1.8;
+
+    font-weight:500;
+
+}
+
+/* ==========================================================
+   RIGHT
+========================================================== */
+
+.aboutRight{
+
+    position:relative;
+
+}
+
+.aboutSmallImage{
+
+    width:220px;
+    height:220px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    margin-bottom:40px;
+
+}
+
+.aboutSmallImage img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.aboutSmallImage:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.aboutRight h3{
+
+    font-family:"Playfair Display",serif;
+
+    color:var(--ab-dark);
+
+    font-size:2.6rem;
+
+    line-height:1.3;
+
+    margin-bottom:25px;
+
+}
+
+.aboutRight>p{
+
+    color:var(--ab-text);
+
+    line-height:2;
+
+    margin-bottom:45px;
+
+    font-size:1rem;
+
+}
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.aboutFeatures{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    padding:22px;
+
+    border:1px solid var(--ab-border);
+
+    border-radius:18px;
+
+    background:#fff;
+
+    transition:var(--ab-transition);
+
+}
+
+.feature:hover{
+
+    transform:translateX(10px);
+
+    border-color:var(--ab-gold);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.06);
+
+}
+
+.featureIcon{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#f5efe4;
+
+    color:var(--ab-gold);
+
+    flex-shrink:0;
+
+    transition:var(--ab-transition);
+
+}
+
+.feature:hover .featureIcon{
+
+    background:var(--ab-gold);
+
+    color:#fff;
+
+}
+
+.feature h4{
+
+    color:var(--ab-dark);
+
+    margin-bottom:8px;
+
+    font-size:1.1rem;
+
+}
+
+.feature span{
+
+    color:var(--ab-text);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.aboutStats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+    margin:55px 0;
+}
+
+.aboutStats div{
+
+    background:#fff;
+
+    border:1px solid var(--ab-border);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:var(--ab-transition);
+
+}
+
+.aboutStats div:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--ab-gold);
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.aboutStats h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:2.6rem;
+
+    color:var(--ab-gold);
+
+    margin-bottom:10px;
+
+}
+
+.aboutStats span{
+
+    color:var(--ab-text);
+
+    font-size:.95rem;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.aboutRight button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 36px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--ab-dark);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-size:.95rem;
+
+    letter-spacing:.5px;
+
+    transition:var(--ab-transition);
+
+}
+
+.aboutRight button svg{
+
+    transition:var(--ab-transition);
+
+}
+
+.aboutRight button:hover{
+
+    background:var(--ab-gold);
+
+    color:#111;
+
+    transform:translateY(-4px);
+
+}
+
+.aboutRight button:hover svg{
+
+    transform:translate(6px,-6px);
+
+}
+
+/* ==========================================================
+   DECORATIVE ELEMENTS
+========================================================== */
+
+.about{
+    position:relative;
+}
+
+.about::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(200,169,106,.08),
+        transparent 70%
+    );
+
+    top:-180px;
+    right:-180px;
+
+    pointer-events:none;
+
+}
+
+.about::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(200,169,106,.06),
+        transparent 70%
+    );
+
+    bottom:-140px;
+    left:-140px;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   IMAGE DECORATION
+========================================================== */
+
+.aboutImageLarge{
+    position:relative;
+}
+
+.aboutImageLarge::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+.aboutHeading,
+.aboutLeft,
+.aboutRight{
+
+    animation:aboutFade .9s ease both;
+
+}
+
+@keyframes aboutFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:1200px){
+
+.about{
+
+    padding:110px 5%;
+
+}
+
+.aboutContent{
+
+    grid-template-columns:1fr;
+
+    gap:70px;
+
+}
+
+.aboutImageLarge{
+
+    height:600px;
+
+}
+
+.experienceCard{
+
+    right:30px;
+    bottom:30px;
+
+}
+
+.aboutRight{
+
+    text-align:center;
+
+}
+
+.aboutSmallImage{
+
+    margin:0 auto 40px;
+
+}
+
+.aboutStats{
+
+    max-width:700px;
+
+    margin:55px auto;
+
+}
+
+.aboutRight button{
+
+    margin:auto;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.about{
+
+    padding:90px 24px;
+
+}
+
+.aboutHeading{
+
+    margin-bottom:70px;
+
+}
+
+.aboutHeading h2{
+
+    font-size:2.4rem;
+
+}
+
+.aboutImageLarge{
+
+    height:420px;
+
+    border-radius:24px;
+
+}
+
+.experienceCard{
+
+    position:relative;
+
+    right:auto;
+    bottom:auto;
+
+    width:100%;
+
+    margin-top:25px;
+
+}
+
+.aboutRight h3{
+
+    font-size:2rem;
+
+}
+
+.aboutFeatures{
+
+    gap:18px;
+
+}
+
+.feature{
+
+    padding:18px;
+
+}
+
+.aboutStats{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.aboutRight button{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media(max-width:480px){
+
+.about{
+
+    padding:70px 18px;
+
+}
+
+.aboutHeading h2{
+
+    font-size:2rem;
+
+}
+
+.aboutHeading p{
+
+    font-size:.95rem;
+
+}
+
+.aboutImageLarge{
+
+    height:320px;
+
+}
+
+.aboutSmallImage{
+
+    width:170px;
+    height:170px;
+
+}
+
+.aboutRight h3{
+
+    font-size:1.6rem;
+
+}
+
+.feature{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    align-items:center;
+
+}
+
+.featureIcon{
+
+    width:56px;
+    height:56px;
+
+}
+
+.experienceCard h3{
+
+    font-size:3rem;
+
+}
+
+.aboutStats h2{
+
+    font-size:2.2rem;
+
+}
+
+}
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media(min-width:1600px){
+
+.aboutContainer{
+
+    max-width:1600px;
+
+}
+
+.aboutImageLarge{
+
+    height:850px;
+
+}
+
+.aboutHeading h2{
+
+    font-size:5rem;
+
+}
+
+.aboutRight h3{
+
+    font-size:3rem;
+
+}
+
+}

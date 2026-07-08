@@ -1,0 +1,657 @@
+/* ==========================================================
+   CTA SECTION
+========================================================== */
+
+.cta{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 7%;
+    overflow:hidden;
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.ctaBg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:1;
+    transform:scale(1.05);
+}
+
+.ctaOverlay{
+    position:absolute;
+    inset:0;
+    z-index:2;
+
+    background:
+    linear-gradient(
+        rgba(248,246,242,.78),
+        rgba(248,246,242,.82)
+    );
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.ctaContainer{
+    position:relative;
+    z-index:5;
+
+    width:100%;
+    max-width:1450px;
+
+    display:flex;
+    justify-content:center;
+}
+
+/* ==========================================================
+   GLASS CARD
+========================================================== */
+
+.ctaCard{
+
+    width:100%;
+    max-width:900px;
+
+    padding:70px;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--faq-border);
+
+    transition:var(--faq-transition);
+
+}
+
+.ctaCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================================
+   TAG
+========================================================== */
+
+.ctaTag{
+
+    display:inline-block;
+
+    color:var(--faq-gold);
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.ctaCard h2{
+
+    color:var(--faq-dark);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(3rem,5vw,5rem);
+
+    line-height:1.1;
+
+    margin-bottom:28px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.ctaCard p{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    color:var(--faq-text);
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.ctaButtons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:60px;
+
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:.95rem;
+
+    transition:var(--faq-transition);
+
+    letter-spacing:.5px;
+
+}
+
+.primaryBtn{
+
+    background:var(--faq-gold);
+
+    color:var(--faq-white);
+
+    border:none;
+
+}
+
+.primaryBtn svg{
+
+    transition:var(--faq-transition);
+
+}
+
+.primaryBtn:hover{
+
+    background:var(--faq-dark);
+
+    color:var(--faq-white);
+
+}
+
+.primaryBtn:hover svg{
+
+    transform:translate(6px,-6px);
+
+}
+
+.secondaryBtn{
+
+    background:transparent;
+
+    color:var(--faq-dark);
+
+    border:1px solid var(--faq-border);
+
+}
+
+.secondaryBtn:hover{
+
+    background:var(--faq-gold);
+
+    color:var(--faq-white);
+
+    border-color:var(--faq-gold);
+
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.ctaStats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+.ctaStat{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:16px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:var(--faq-white);
+
+    border:1px solid var(--faq-border);
+
+    transition:var(--faq-transition);
+
+}
+
+.ctaStat:hover{
+
+    background:#fdfaf5;
+
+    border-color:var(--faq-gold);
+
+}
+
+.ctaStat svg{
+
+    font-size:2rem;
+
+    color:var(--faq-gold);
+
+}
+
+.ctaStat h3{
+
+    color:var(--faq-dark);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:2rem;
+
+    margin-bottom:4px;
+
+}
+
+.ctaStat span{
+
+    color:var(--faq-text);
+
+    font-size:.9rem;
+
+}
+/* ==========================================================
+   GOLD ACCENT LINE
+========================================================== */
+
+.ctaCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:120px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:var(--faq-gold);
+
+}
+
+.ctaCard{
+
+    position:relative;
+
+}
+
+/* ==========================================================
+   DECORATIVE GLOW
+========================================================== */
+
+.cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    top:-180px;
+
+    right:-180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(200,169,106,.08),
+        transparent 70%
+    );
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+
+    height:380px;
+
+    left:-150px;
+
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(200,169,106,.06),
+        transparent 70%
+    );
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.ctaCard:hover{
+
+    border-color:var(--faq-gold);
+
+}
+
+.ctaCard:hover .ctaTag{
+
+    letter-spacing:6px;
+
+}
+
+.ctaCard:hover .ctaBg{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   STATS HOVER
+========================================================== */
+
+.ctaStat:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.ctaStat:hover svg{
+
+    transform:scale(1.1);
+
+}
+
+.ctaStat svg{
+
+    transition:var(--faq-transition);
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+.ctaCard{
+
+    animation:ctaFade .9s ease both;
+
+}
+
+@keyframes ctaFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media(min-width:1600px){
+
+    .ctaCard{
+
+        max-width:980px;
+
+        padding:90px;
+
+    }
+
+    .ctaCard h2{
+
+        font-size:5.5rem;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:1200px){
+
+    .cta{
+
+        padding:100px 5%;
+
+        min-height:auto;
+
+    }
+
+    .ctaCard{
+
+        padding:55px;
+
+    }
+
+    .ctaStats{
+
+        gap:18px;
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    .cta{
+
+        padding:80px 22px;
+
+    }
+
+    .ctaCard{
+
+        padding:40px 28px;
+
+        border-radius:24px;
+
+    }
+
+    .ctaCard h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .ctaCard p{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .ctaButtons{
+
+        flex-direction:column;
+
+        gap:16px;
+
+    }
+
+    .primaryBtn,
+    .secondaryBtn{
+
+        width:100%;
+
+    }
+
+    .ctaStats{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media(max-width:480px){
+
+    .cta{
+
+        padding:70px 18px;
+
+    }
+
+    .ctaCard{
+
+        padding:32px 20px;
+
+    }
+
+    .ctaTag{
+
+        font-size:.75rem;
+
+        letter-spacing:3px;
+
+    }
+
+    .ctaCard h2{
+
+        font-size:2rem;
+
+    }
+
+    .ctaCard p{
+
+        font-size:.9rem;
+
+        margin-bottom:35px;
+
+    }
+
+    .primaryBtn,
+    .secondaryBtn{
+
+        padding:16px 20px;
+
+        font-size:.9rem;
+
+    }
+
+    .ctaStat{
+
+        padding:18px;
+
+    }
+
+    .ctaStat h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .ctaStat span{
+
+        font-size:.82rem;
+
+    }
+
+}

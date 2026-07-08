@@ -1,0 +1,600 @@
+/* =====================================================
+   FEATURED PROJECTS
+===================================================== */
+
+
+
+.fp{
+    background:var(--faq-bg);
+    padding:140px 7%;
+    overflow:hidden;
+}
+
+.fpContainer{
+    max-width:1450px;
+    margin:auto;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.fpHeading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 110px;
+}
+
+.fpHeading span{
+    display:inline-block;
+    color:var(--faq-gold);
+    letter-spacing:4px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.fpHeading h2{
+    color:var(--faq-dark);
+    font-family:"Playfair Display",serif;
+    font-size:clamp(2.8rem,5vw,4.6rem);
+    line-height:1.15;
+    margin-bottom:22px;
+}
+
+.fpHeading p{
+    color:var(--faq-text);
+    line-height:1.9;
+    font-size:1rem;
+}
+
+/* =====================================================
+   ROW
+===================================================== */
+
+.fpRow{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    align-items:center;
+    gap:90px;
+    margin-bottom:140px;
+}
+
+.fpRow.reverse{
+    grid-template-columns:.8fr 1.2fr;
+}
+
+.fpRow.reverse .fpImage{
+    order:2;
+}
+
+.fpRow.reverse .fpContent{
+    order:1;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.fpImage{
+    position:relative;
+    height:650px;
+    overflow:hidden;
+    border-radius:30px;
+    border:1px solid var(--faq-border);
+    background:var(--faq-white);
+}
+
+.fpImage img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1.2s ease;
+}
+
+.fpImageOverlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.10)
+    );
+
+    transition:.5s;
+}
+
+.fpImage::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:0;
+    height:4px;
+
+    background:var(--faq-gold);
+
+    transition:.6s;
+
+}
+
+.fpImage:hover::after{
+
+    width:100%;
+
+}
+
+.fpImage:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.fpImage:hover .fpImageOverlay{
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.15)
+    );
+
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.fpContent{
+
+    position:relative;
+
+}
+
+.fpNumber{
+
+    display:block;
+
+    font-size:5rem;
+
+    color:rgba(200,169,106,.12);
+
+    font-weight:700;
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    font-family:"Playfair Display",serif;
+
+}
+
+.fpContent h3{
+
+    color:var(--faq-dark);
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+
+    font-family:"Playfair Display",serif;
+
+}
+
+.fpLocation{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--faq-gold);
+
+    margin-bottom:20px;
+
+    font-size:1rem;
+
+}
+
+.fpLocation svg{
+
+    font-size:1.1rem;
+
+}
+
+.fpContent h4{
+
+    color:var(--faq-dark);
+
+    font-size:1.2rem;
+
+    font-weight:500;
+
+    margin-bottom:22px;
+
+}
+
+.fpContent p{
+
+    color:var(--faq-text);
+
+    line-height:2;
+
+    margin-bottom:40px;
+
+    max-width:520px;
+
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.fpContent button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:transparent;
+
+    border:1px solid var(--faq-border);
+
+    color:var(--faq-dark);
+
+    padding:18px 34px;
+
+    cursor:pointer;
+
+    transition:var(--faq-transition);
+
+    font-size:.95rem;
+
+    letter-spacing:.5px;
+
+}
+
+.fpContent button svg{
+
+    transition:var(--faq-transition);
+
+}
+
+.fpContent button:hover{
+
+    background:var(--faq-gold);
+
+    color:var(--faq-white);
+
+    border-color:var(--faq-gold);
+
+}
+
+.fpContent button:hover svg{
+
+    transform:translate(6px,-6px);
+
+}
+/* =====================================================
+   DECORATIVE ELEMENTS
+===================================================== */
+
+.fpRow{
+    position:relative;
+}
+
+.fpRow::before{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border:1px solid rgba(200,169,106,.15);
+    border-radius:50%;
+    top:-40px;
+    right:-40px;
+    pointer-events:none;
+}
+
+.fpRow.reverse::before{
+    left:-40px;
+    right:auto;
+}
+
+.fpContent::after{
+    content:"";
+    position:absolute;
+    left:-30px;
+    top:20px;
+    width:3px;
+    height:120px;
+    background:linear-gradient(
+        to bottom,
+        var(--faq-gold),
+        transparent
+    );
+}
+
+.fpRow.reverse .fpContent::after{
+    left:auto;
+    right:-30px;
+}
+
+/* =====================================================
+   ENTRANCE ANIMATION
+===================================================== */
+
+.fpImage,
+.fpContent{
+    animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1200px){
+
+    .fp{
+        padding:110px 5%;
+    }
+
+    .fpRow,
+    .fpRow.reverse{
+
+        grid-template-columns:1fr;
+        gap:50px;
+        margin-bottom:100px;
+
+    }
+
+    .fpRow.reverse .fpImage,
+    .fpRow.reverse .fpContent{
+
+        order:unset;
+
+    }
+
+    .fpImage{
+
+        height:520px;
+
+    }
+
+    .fpContent{
+
+        text-align:center;
+
+    }
+
+    .fpContent p{
+
+        margin-inline:auto;
+
+    }
+
+    .fpLocation{
+
+        justify-content:center;
+
+    }
+
+    .fpContent::after{
+
+        display:none;
+
+    }
+
+    .fpRow::before{
+
+        display:none;
+
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    .fp{
+
+        padding:90px 22px;
+
+    }
+
+    .fpHeading{
+
+        margin-bottom:70px;
+
+    }
+
+    .fpHeading h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .fpImage{
+
+        height:380px;
+        border-radius:22px;
+
+    }
+
+    .fpNumber{
+
+        font-size:3rem;
+
+    }
+
+    .fpContent h3{
+
+        font-size:2rem;
+
+    }
+
+    .fpContent h4{
+
+        font-size:1.05rem;
+
+    }
+
+    .fpContent p{
+
+        line-height:1.8;
+        font-size:.95rem;
+
+    }
+
+    .fpContent button{
+
+        width:100%;
+        justify-content:center;
+
+    }
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+    .fp{
+
+        padding:70px 18px;
+
+    }
+
+    .fpHeading h2{
+
+        font-size:2rem;
+
+    }
+
+    .fpHeading p{
+
+        font-size:.9rem;
+
+    }
+
+    .fpImage{
+
+        height:280px;
+        border-radius:18px;
+
+    }
+
+    .fpNumber{
+
+        font-size:2.3rem;
+
+    }
+
+    .fpContent h3{
+
+        font-size:1.6rem;
+
+    }
+
+    .fpContent h4{
+
+        font-size:1rem;
+
+    }
+
+    .fpContent p{
+
+        font-size:.88rem;
+        line-height:1.7;
+
+    }
+
+    .fpContent button{
+
+        padding:16px 24px;
+        font-size:.9rem;
+
+    }
+
+}
+
+/* =====================================================
+   LARGE SCREENS
+===================================================== */
+
+@media(min-width:1600px){
+
+    .fpContainer{
+
+        max-width:1600px;
+
+    }
+
+    .fpImage{
+
+        height:720px;
+
+    }
+
+    .fpContent h3{
+
+        font-size:3.5rem;
+
+    }
+
+    .fpContent p{
+
+        font-size:1.05rem;
+
+    }
+
+}
+
+/* =====================================================
+   SMOOTH HOVER IMPROVEMENTS
+===================================================== */
+
+.fpImage{
+    will-change:transform;
+}
+
+.fpCard,
+.fpImage img,
+.fpContent button,
+.fpImageOverlay{
+    backface-visibility:hidden;
+    transform:translateZ(0);
+}
+
+.fpContent button:active{
+    transform:scale(.98);
+}

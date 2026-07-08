@@ -1,0 +1,443 @@
+/* =========================================================
+   FEATURED COLLECTIONS
+========================================================= */
+
+.featuredCollections{
+    background:var(--faq-bg);
+    padding:120px 7%;
+    overflow:hidden;
+}
+
+.fcContainer{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.fcHeading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 70px;
+}
+
+.fcHeading span{
+    display:inline-block;
+    color:var(--faq-gold);
+    letter-spacing:4px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.fcHeading h2{
+    color:var(--faq-dark);
+    font-size:clamp(2.4rem,5vw,4rem);
+    line-height:1.15;
+    margin-bottom:20px;
+    font-family:"Playfair Display",serif;
+}
+
+.fcHeading p{
+    color:var(--faq-text);
+    line-height:1.9;
+    font-size:1rem;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.fcGrid{
+    display:flex;
+    gap:28px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scroll-behavior:smooth;
+
+    padding-bottom:20px;
+
+    scroll-snap-type:x mandatory;
+
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+
+.fcGrid::-webkit-scrollbar{
+    display:none;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.fcCard{
+    position:relative;
+
+    flex:0 0 380px;
+
+    height:560px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:var(--faq-white);
+
+    border:1px solid var(--faq-border);
+
+    transition:var(--faq-transition);
+
+    scroll-snap-align:start;
+}
+
+.fcCard:hover{
+    transform:translateY(-12px);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.15);
+}
+
+.fcCard img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s ease;
+}
+
+.fcOverlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.88) 5%,
+        rgba(0,0,0,.42) 45%,
+        rgba(0,0,0,.10) 100%
+    );
+    transition:var(--faq-transition);
+}
+
+.fcContent{
+    position:absolute;
+    left:35px;
+    right:35px;
+    bottom:35px;
+    z-index:5;
+}
+
+.fcSmall{
+    display:inline-block;
+    color:var(--faq-gold);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.75rem;
+    margin-bottom:14px;
+}
+
+.fcContent h3{
+    color:var(--faq-white);
+    font-size:2rem;
+    margin-bottom:12px;
+    font-family:"Playfair Display",serif;
+}
+
+.fcContent p{
+    color:#ececec;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.fcContent button{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:transparent;
+    color:var(--faq-white);
+
+    border:none;
+    cursor:pointer;
+
+    font-size:.95rem;
+    letter-spacing:.5px;
+    transition:var(--faq-transition);
+}
+
+.fcContent button svg{
+    transition:var(--faq-transition);
+}
+
+.fcContent button:hover{
+    color:var(--faq-gold);
+}
+
+.fcContent button:hover svg{
+    transform:translateX(8px);
+}
+
+/* =========================================================
+   TOP ICON
+========================================================= */
+
+.fcTopIcon{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    color:var(--faq-white);
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:var(--faq-transition);
+
+    z-index:10;
+}
+
+.fcTopIcon svg{
+    font-size:1.25rem;
+}
+
+.fcCard:hover .fcTopIcon{
+    background:var(--faq-gold);
+    color:var(--faq-dark);
+    transform:rotate(45deg);
+}
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.fcCard:hover{
+    transform:translateY(-14px);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.15);
+}
+
+.fcCard:hover img{
+    transform:scale(1.12);
+}
+
+.fcCard:hover .fcOverlay{
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.92),
+        rgba(0,0,0,.52),
+        rgba(0,0,0,.16)
+    );
+}
+
+/* Gold line */
+
+.fcCard::after{
+    content:"";
+    position:absolute;
+    left:35px;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:var(--faq-gold);
+    transition:.5s;
+    z-index:20;
+}
+
+.fcCard:hover::after{
+    width:120px;
+}
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.fcBottom{
+    margin-top:90px;
+    text-align:center;
+    padding:70px 40px;
+
+    border-radius:28px;
+
+    background:var(--faq-white);
+
+    border:1px solid var(--faq-border);
+}
+
+.fcBottom h3{
+    color:var(--faq-dark);
+    font-size:2.4rem;
+    margin-bottom:20px;
+    font-family:"Playfair Display",serif;
+}
+
+.fcBottom p{
+    max-width:700px;
+    margin:auto;
+    color:var(--faq-text);
+    line-height:1.9;
+}
+
+.fcBottom a{
+    margin-top:40px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    color:var(--faq-dark);
+
+    border:1px solid var(--faq-gold);
+
+    padding:18px 36px;
+
+    transition:var(--faq-transition);
+}
+
+.fcBottom a svg{
+    transition:var(--faq-transition);
+}
+
+.fcBottom a:hover{
+    background:var(--faq-gold);
+    color:var(--faq-white);
+}
+
+.fcBottom a:hover svg{
+    transform:translateX(8px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+.fcGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.fcCard{
+    height:520px;
+}
+
+}
+
+@media(max-width:992px){
+
+.fcCard{
+
+flex:0 0 320px;
+
+height:500px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.featuredCollections{
+    padding:90px 25px;
+}
+
+.fcGrid{
+
+gap:18px;
+
+}
+
+.fcCard{
+
+flex:0 0 280px;
+
+height:420px;
+
+}
+
+.fcHeading{
+    margin-bottom:45px;
+}
+
+.fcHeading h2{
+    font-size:2.4rem;
+}
+
+.fcContent{
+    left:25px;
+    right:25px;
+    bottom:25px;
+}
+
+.fcContent h3{
+    font-size:1.7rem;
+}
+
+.fcBottom{
+    padding:50px 25px;
+    margin-top:60px;
+}
+
+.fcBottom h3{
+    font-size:2rem;
+}
+
+}
+
+@media(max-width:480px){
+
+.fcHeading h2{
+    font-size:2rem;
+}
+
+.fcCard{
+
+flex:0 0 240px;
+
+height:360px;
+
+}
+
+.fcContent h3{
+    font-size:1.5rem;
+}
+
+.fcContent p{
+    font-size:.9rem;
+}
+
+.fcTopIcon{
+    width:48px;
+    height:48px;
+}
+
+.fcBottom h3{
+    font-size:1.6rem;
+}
+
+.fcBottom a{
+    width:100%;
+    justify-content:center;
+}
+
+}
